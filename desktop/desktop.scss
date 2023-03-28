@@ -24,6 +24,37 @@
   display: block;
 }
 
+.d-header .custom-header-links {
+  .headerLink {
+    ul.submenu {
+      display: none;
+      li.sublink {
+        list-style: none;
+        padding: 12px 20px;
+        border-bottom: 1px solid #e2e2e2;
+        a {
+          text-transform: none;
+          font-weight: 400;
+          font-size: 0.9em;
+          font-family: "Montserrat";
+          padding: 12px 20px;
+          &:hover {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    &:hover ul.submenu {
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      left: 60px;
+      background: var(--header_background);
+      font-weight: 400;
+    }
+  }
+}
+
 /* home-symbol icon at the top-right in the "latest" page is weird in size/position when the page is scrolled */
 #site-logo {
   height: 2.2857em !important; /* dimensions taken from adjacent neighboring icons: search etc*/
