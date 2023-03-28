@@ -121,10 +121,7 @@
         logo = h('');
       }
 
-      return h('span#brand', [
-        h('h2#brand-text-logo.text-logo', { key: 'logo-text' }, title),
-        logo
-      ]);
+      return h('h2#brand-text-logo.text-logo', { key: 'logo' }, [title, logo]);
     },
 
     html() {

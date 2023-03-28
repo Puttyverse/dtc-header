@@ -1,8 +1,8 @@
 {
-  "name": "discourse-custom-header-links",
+  "name": "puttyverse-dtc-header",
   "version": "1.0.0",
-  "repository": "https://github.com/discourse/discourse-custom-header-links",
-  "author": "Discourse",
+  "repository": "https://github.com/Puttyverse/dtc-header",
+  "author": "Ti0",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "eslint-config-discourse": "^3.2.0"
