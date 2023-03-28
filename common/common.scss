@@ -4,31 +4,38 @@
   }
 
   #brand-logo {
-    max-height: 32px;
+    max-height: 20px;
+    padding-bottom: 4px;
+    padding-left: 2px;
   }
 
   #brand-text-logo {
     line-height: 32px;
     margin: 0;
+    text-transform: uppercase;
+    font-size: 1.75em;
+  }
+
+  #byline-text {
+    font-style: italic;
   }
 
   nav.links {
     float: right;
+    margin-top: 10px;
   }
 
   .nav-pills {
     margin: 0;
     > li > a {
-      color: var(--secondary);
+      color: var(--primary);
       line-height: 22px;
       &:hover {
-        color: var(--quaternary);
-        background-color: var(--quaternary-low);
+        color: var(--tertiary);
       }
       &.active > a,
       > a.active {
-        color: var(--secondary);
-        background-color: var(--quaternary);
+        color: var(--tertiary);
       }
     }
   }
