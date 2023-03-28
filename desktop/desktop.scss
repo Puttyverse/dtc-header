@@ -23,6 +23,9 @@
   position: fixed;
   width: 100%;
 }
+#main-outlet {
+  margin-top: 128px;
+}
 // Hide Discourse Home and only show on scroll.
 .d-header .title {
   display: none;
