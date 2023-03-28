@@ -20,6 +20,7 @@
 /* Header & Navigation*/
 .d-header-wrap {
   top: 68px;
+  position: fixed;
 }
 // Hide Discourse Home and only show on scroll.
 .d-header .title {
@@ -43,6 +44,7 @@
           font-size: 0.9em;
           font-family: "Montserrat";
           padding: 12px 6px;
+          border-bottom: none;
           &:hover {
             border-bottom: none;
           }
