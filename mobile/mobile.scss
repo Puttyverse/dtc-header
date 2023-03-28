@@ -1,0 +1,59 @@
+.b-header {
+  .title {
+    padding: 0.5em;
+    a {
+      color: var(--tertiary);
+    }
+    &:visited {
+      color: var(--tertiary);
+    }
+  }
+
+  .menu-panel li a.widget-link {
+    width: auto;
+  }
+
+  > ul.icons {
+    margin: 0 10px 0 0;
+  }
+}
+
+#toggle-hamburger-brand-menu {
+  margin: 0;
+
+  .d-icon {
+    font-size: 1.143em;
+    vertical-align: middle;
+  }
+}
+
+.profiler-results {
+  display: none;
+}
+
+// applies when show_bar_on_mobile is checked
+.above-site-header-outlet .b-header {
+  width: 100%;
+  background-color: var(--tertiary);
+  height: 48px;
+  margin-bottom: 0;
+
+  .title {
+    float: left;
+    margin-right: 24px;
+    a {
+      color: var(--secondary);
+    }
+    &:visited {
+      color: var(--secondary);
+    }
+    .rtl & {
+      float: right;
+      margin-left: 24px;
+      margin-right: 0;
+    }
+  }
+  .title {
+    padding: 0px;
+  }
+}

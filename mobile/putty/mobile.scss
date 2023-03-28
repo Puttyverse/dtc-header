@@ -1,0 +1,46 @@
+.d-header .contents {
+  margin: 0 auto;
+  width: 90%;
+}
+header.d-header.clearfix {
+  background: url(https://theputtyverse.com/wp-content/themes/Divi%20Child%20Theme/img/banner.jpg);
+  height: 80px;
+}
+
+.d-header #site-logo {
+  max-width: 120px;}
+.d-header .icons .icon {
+  color: #2061c4;}
+
+button.widget-button.btn.show-topic-admin.no-text {
+  border-radius: 50%;}
+
+.show-topic-admin {
+  top: 130px;
+}
+.menu-panel.slide-in {
+  z-index: 1001;
+}
+.user-main .about .details .primary .primary-textual {
+  width: 90%;
+}
+
+/* Groups styling */
+.groups-table button {
+  background: #2061c4;
+  color: white;
+}
+
+#reply-control .reply-to i {
+  color: #a3a2a2 !important;
+}
+.alert.alert-info {
+  margin-top: 37px; background: #fdd417;
+}
+
+/* remove "Posted" and "Seen" columns from group-detail member lists */
+.group-member .user-detail .details .group-member-info {
+  visibility: hidden;
+  width: 0px;
+  font-size: 0px;
+}

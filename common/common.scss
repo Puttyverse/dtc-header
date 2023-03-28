@@ -1,3 +1,81 @@
+.b-header {
+  .contents {
+    margin: 8px 0;
+  }
+
+  #brand-logo {
+    max-height: 32px;
+  }
+
+  #brand-text-logo {
+    line-height: 32px;
+    margin: 0;
+  }
+
+  nav.links {
+    float: right;
+  }
+
+  .nav-pills {
+    margin: 0;
+    > li > a {
+      color: var(--secondary);
+      line-height: 22px;
+      &:hover {
+        color: var(--quaternary);
+        background-color: var(--quaternary-low);
+      }
+      &.active > a,
+      > a.active {
+        color: var(--secondary);
+        background-color: var(--quaternary);
+      }
+    }
+  }
+
+  .panel {
+    float: right;
+    position: relative;
+    .rtl & {
+      float: left;
+    }
+  }
+
+  ul.icons {
+    text-align: center;
+    margin: 0 0 0 5px;
+    > li {
+      float: left;
+      list-style: none;
+    }
+    a {
+      width: 28px;
+      height: 28px;
+      font-size: 16px;
+      line-height: 28px;
+      display: inline-block;
+      margin: 2px;
+    }
+    .rtl & {
+      margin: 0 5px 0 0;
+      > li {
+        float: right;
+      }
+    }
+  }
+
+  .panel > ul.icons {
+    float: right;
+    a,
+    .d-icon {
+      color: var(--secondary);
+    }
+    .rtl & {
+      float: left;
+    }
+  }
+}
+
 .d-header {
   &.hide-menus {
     .headerLink:not(.keep) {

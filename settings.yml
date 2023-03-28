@@ -13,3 +13,19 @@ links_position:
     - left
   description:
     en: "Note that when links are displayed on the left, they're automatically hidden while scrolling within topics to make room for the title"
+
+brand_name:
+  default: "The Puttyverse"
+byline:
+  default: "Support + Inspiration for Multipotentialites"
+website_url:
+  default: "https://theputtyverse.com/"
+logo_url:
+  default: "https://staging.theputtyverse.com/wp-content/uploads/PuttyverseLogoNoText.png"
+mobile_logo_url:
+  default: ""
+links:
+  type: list
+  list_type: simple
+  default: ""
+  description: "Format: name,url,target (optional)"

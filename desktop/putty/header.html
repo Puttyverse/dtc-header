@@ -1,0 +1,83 @@
+<header id="main-header" data-height-onload="101">
+  <div class="container clearfix et_menu_container">
+
+  </div> <!-- .container -->
+</header> <!-- #main-header -->
+<div class="wrap">
+  <div class="logo_container">
+    <span class="logo_helper"></span>
+    <a href="https://theputtyverse.com/">
+      <img src="https://theputtyverse.com/wp-content/uploads/Puttyverse-Logo-Rect-191x25-1.png" alt="The Puttyverse" id="logo" data-height-percentage="83" />
+    </a>
+    <span class="tagline">Support + Inspiration for Serious Multipotentialites</span>
+  </div>
+  <div id="et-top-navigation" data-height="101" data-fixed-height="39">
+    <nav id="top-menu-nav">
+      <ul id="top-menu" class="nav">
+        <li id="menu-item-804" class="menu-item"><a href="https://theputtyverse.com/">Home</a></li>
+        <li id="menu-item-655" class="menu-item"><a href="/"  onclick="require('discourse/lib/url').default.routeTo(jQuery(event.currentTarget).attr('href')); return false;">Forum</a></li>
+        <li id="menu-item-1036" class="menu-item has-dropdown">
+          <a href="https://theputtyverse.com/gcal-events/">Events</a>
+          <ul class="fallback">
+            <li><a href="https://theputtyverse.com/gcal-events/">Upcoming Events</a></li>
+            <li><a href="https://theputtyverse.com/add-event/">Create an Event</a></li>
+            <li><a href="https://theputtyverse.com/workshops/">Workshop Recordings</a></li>
+            <li><a href="https://theputtyverse.com/workshop-proposal/">Lead a Workshop</a></li>
+          </ul>
+        </li>
+        <li id="menu-item-1036" class="menu-item has-dropdown">
+          <a href="https://theputtyverse.com/groups/">Groups</a>
+          <ul class="fallback">
+            <li><a href="https://forum.theputtyverse.com/groups/">Join/Leave Groups</a></li>
+            <li><a href="https://forum.theputtyverse.com/c/groups/">View Groups Activity</a></li>
+          </ul>
+        </li>
+        <li id="menu-item-1036" class="menu-item has-dropdown">
+          <a href="https://theputtyverse.com/member-directory/">Members</a>
+          <ul class="fallback">
+            <li><a href="https://theputtyverse.com/member-directory/">Member Directory</a></li>
+            <li><a href="https://theputtyverse.com/member-directory-preferences/">Member Directory Preferences</a></li>
+          </ul>
+        </li>
+        <li id="menu-item-1036" class="menu-item has-dropdown">
+          <a href="https://theputtyverse.com/help/faq/">Help </a>
+          <ul class="fallback">
+            <li><a href="https://theputtyverse.com/help/faq/">FAQ</a></li>
+            <li><a href="https://theputtyverse.com/community-guidelines/">Community Guidelines</a></li>
+            <li><a href="https://theputtyverse.com/help/contact/">Contact</a></li>
+          </ul>
+        </li>
+        <li id="menu-item-1027" class="menu-item has-dropdown">
+          <a href="https://theputtyverse.com/my-account/">My Account </a>
+          <ul class="fallback">
+            <li><a href="https://forum.theputtyverse.com/my/summary/">View Profile</a></li>
+            <li><a href="https://theputtyverse.com/my-account/member-profile/">Update Profile</a></li>
+            <li><a href="https://forum.theputtyverse.com/my/preferences">Forum Preferences</a></li>
+            <li><a href="https://theputtyverse.com/my-account/customer-logout/">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!--
+    <div id="et_mobile_nav_menu">
+        <div class="mobile_nav closed">
+            <span class="select_page">Select Page</span>
+            <span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+        </div>
+    </div>
+    -->
+  </div> <!-- #et-top-navigation -->
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#top-menu-nav li ul').hide().removeClass('fallback');
+    $('#top-menu-nav li').hover(
+      function () {
+        $('ul', this).stop().slideDown(100);
+      },
+      function () {
+        $('ul', this).stop().slideUp(100);
+      }
+    );
+  });
+</script>

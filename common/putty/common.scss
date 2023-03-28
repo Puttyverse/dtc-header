@@ -1,0 +1,85 @@
+.d-editor-preview {
+  background: #FFF;
+  padding: 10px;
+}
+
+.toggle-preview {
+  color:#FFF !important;
+}
+
+.toggle-preview:hover {
+  text-decoration:none !important;
+}
+
+
+.widget-button.btn-icon .fa.fa-close.d-icon.d-icon-close {
+  font-size: 18px;
+}
+
+/* Remove "show trimmed content" icon to prevent people from expanding ugly raw text from
+replies via the Reply by Email feature */
+.topic-body {
+  details.elided {
+    display: none;
+  }
+}
+
+
+/* Joel Zaslofsky, 2019-02-20
+ * Hide div.bio DIV class field on forum.theputtytribe.com/my/summary or other member profile viewable
+ * Pages because the About info is showing twice as of Discourse v 2.2.0 beta 8
+*/
+.bio {
+  display: none;
+}
+
+.post-notice.new-user .post-notice.returning-user .post-notice.old .staff-notice {
+  background-color: #BCCFED;
+}
+
+.d-header-icons .d-icon-search, .d-header-icons .d-icon-bars {
+  color: #2061C4 !important;
+}
+
+/* To remove Ignore Users functionality from the Discourse front-end since we as a community don't want it. That means: */
+/* Hiding the "Normal / Muted / Ignore" toggle button on forum profile pages (e.g., https://forum.theputtyverse.com/my/summary) */
+/* And removing the whole "Ignore" block from https://forum.theputtyverse.com/my/preferences/users */
+.user-notifications, .user-ignore {
+  display: none !important;
+}
+
+div.card-row.second-row {
+  display: none;
+}
+
+/* Hide Activity and Messages tabs on all group details pages (e.g., https://forum.theputtyverse.com/groups/Coaches */
+.group-nav {
+  .activity,
+  .messages {
+    display: none !important;
+  }
+}
+
+/* Hide Invites tab on all Preferences pages (e.g., https://forum.theputtyverse.com/my/invited/pending) */
+li.invited {
+  display: none !important;
+}
+
+/* Bump the left sidebar lower so it's not cut off by our secondary navigation */
+div.sidebar-wrapper {
+  padding-top:60px !important;
+  margin-top:40px !important;
+}
+
+/* Hide some of the links in the sidebar so there aren't so many options to get overwhelmed by */
+.sidebar-section-link.sidebar-section-link-about.sidebar-row {
+  display: none !important;
+}
+
+.sidebar-section-link.sidebar-section-link-birthdays.sidebar-row {
+  display: none !important;
+}
+
+.sidebar-section-link.sidebar-section-link-badges.sidebar-row {
+  display: none !important;
+}
