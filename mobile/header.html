@@ -86,8 +86,8 @@
       }
     });
 
-    /** api.decorateWidget("home-logo:before", helper => {
-      return [helper.widget.attach('brand-header')];
-    }); */
+    api.decorateWidget("home-logo:before", helper => {
+      return [helper.h('h2#brand-text-logo.text-logo', { key: 'logo' }, settings.brand_name)];
+    });
   }
 </script>

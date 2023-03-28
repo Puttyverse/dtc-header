@@ -54,12 +54,6 @@ export default {
         return helper.h("ul.custom-header-links", headerLinks);
       });
 
-      api.decorateWidget("home-logo:before", helper => {
-        if (this.site.mobileView) {
-          return [helper.h('h2#brand-text-logo.text-logo', { key: 'logo' }, settings.brand_name)];
-        }
-      });
-
       api.decorateWidget("home-logo:after", (helper) => {
         const dHeader = document.querySelector(".d-header");
 
