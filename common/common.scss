@@ -1,4 +1,6 @@
 .b-header {
+  background: var(--header_background);
+
   .contents {
     margin: 8px 0;
   }
@@ -32,10 +34,12 @@
       line-height: 22px;
       &:hover {
         color: #f9ac85;
+        background: none;
       }
       &.active > a,
       > a.active {
         color: #f9ac85;
+        background: none;
       }
     }
   }
