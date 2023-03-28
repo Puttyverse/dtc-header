@@ -33,17 +33,6 @@ export default {
           const linkClass = `.${linkText
             .toLowerCase()
             .replace(/\s/gi, "-")}-custom-header-links`;
-          let linkItem = linkText;
-          if (submenu) {
-            const subLinks = [];
-            const subItems = submenu
-              .split("#")
-              .map((subItem) => {
-                const [text, url] = subItem.split(";").map(x => x.trim());
-                subLinks.push(h("li.sublink", h("a", {href: url}, text)));
-              });
-            linkItem = [linkText, h("ul.submenu", subLinks)];
-          }
 
           const anchorAttributes = {
             title: linkTitle,
@@ -52,11 +41,21 @@ export default {
           if (linkTarget) {
             anchorAttributes.target = linkTarget;
           }
+          let linkItem = h("a", anchorAttributes, linkText);
+
+          if (submenu) {
+            const subLinks = [];
+            const subItems = submenu
+              .split("#")
+              .map((subItem) => {
+                const [text, url] = subItem.split(";").map(x => x.trim());
+                subLinks.push(h("li.sublink", h("a", {href: url}, text)));
+              });
+            linkItem = [h("ul.submenu", subLinks), linkItem];
+          }
 
           headerLinks.push(
-            h(`li.headerLink${deviceClass}${keepOnScrollClass}${linkClass}`,
-              h("a", anchorAttributes, linkItem)
-            )
+            h(`li.headerLink${deviceClass}${keepOnScrollClass}${linkClass}`, linkItem)
           );
         });
 

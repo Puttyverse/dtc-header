@@ -1,3 +1,8 @@
+.brand-header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
 .b-header {
   width: 100%;
   height: 68px;
@@ -30,14 +35,14 @@
       display: none;
       li.sublink {
         list-style: none;
-        padding: 12px 20px;
+        padding: 12px 6px;
         border-bottom: 1px solid #e2e2e2;
         a {
           text-transform: none;
           font-weight: 400;
           font-size: 0.9em;
           font-family: "Montserrat";
-          padding: 12px 20px;
+          padding: 12px 6px;
           &:hover {
             border-bottom: none;
           }
@@ -47,8 +52,7 @@
     &:hover ul.submenu {
       display: inline-block;
       position: absolute;
-      top: 20px;
-      left: 60px;
+      top: 35px;
       background: var(--header_background);
       font-weight: 400;
     }

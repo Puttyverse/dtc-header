@@ -107,9 +107,9 @@
       font-size: $font-up-1;
       font-weight: bold;
       text-transform: uppercase;
-      &:hover {
-        border-bottom: 2px solid #01eab0;
-      }
+    }
+    &:hover a {
+      border-bottom: 2px solid #01eab0;
     }
   }
 }
