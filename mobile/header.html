@@ -93,6 +93,9 @@
           h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: settings.logo_url } })
         ]);
       }
+      html() {
+        return h('a', { attributes: { href: settings.website_url } }, this.logo());
+      },
     });
   }
 </script>
