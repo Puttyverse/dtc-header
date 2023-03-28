@@ -9,7 +9,6 @@ export default {
   initialize() {
     withPluginApi("0.8.20", (api) => {
       const customHeaderLinks = settings.Custom_header_links;
-      console.log(customHeaderLinks);
 
       const linksPosition =
         settings.links_position === "right"
@@ -53,6 +52,12 @@ export default {
 
       api.decorateWidget(linksPosition, (helper) => {
         return helper.h("ul.custom-header-links", headerLinks);
+      });
+
+      api.decorateWidget("home-logo:before", helper => {
+        if (this.site.mobileView) {
+          return [helper.h('h2#brand-text-logo.text-logo', { key: 'logo' }, settings.brand_name)];
+        }
       });
 
       api.decorateWidget("home-logo:after", (helper) => {

@@ -12,9 +12,11 @@
   }
 }
 
-/* Header & Navigation
-Hide Discourse Home and only show on scroll.
-*/
+/* Header & Navigation*/
+.d-header-wrap {
+  top: 68px;
+}
+// Hide Discourse Home and only show on scroll.
 .d-header .title {
   display: none;
 }

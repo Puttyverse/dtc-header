@@ -79,15 +79,15 @@
         panelContents.push(this.attach('brand-header-icon', { brandMenuVisible: state.brandMenuVisible }));
 
         if (state.brandMenuVisible) {
-          panelContents.push(this.attach('hamburger-brand-menu', { generalLinks: this.generalLinks(), iconLinks: this.iconLinks() }));
+          //panelContents.push(this.attach('hamburger-brand-menu', { generalLinks: this.generalLinks(), iconLinks: this.iconLinks() }));
         }
 
         return panelContents;
       }
     });
 
-    api.decorateWidget("home-logo:before", helper => {
+    /** api.decorateWidget("home-logo:before", helper => {
       return [helper.widget.attach('brand-header')];
-    });
+    }); */
   }
 </script>
