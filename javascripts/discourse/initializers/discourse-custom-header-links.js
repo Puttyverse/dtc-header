@@ -9,9 +9,7 @@ export default {
   initialize() {
     withPluginApi("0.8.20", (api) => {
       const customHeaderLinks = settings.Custom_header_links;
-      if (!customHeaderLinks.length) {
-        return;
-      }
+      console.log(customHeaderLinks);
 
       const linksPosition =
         settings.links_position === "right"
@@ -24,7 +22,7 @@ export default {
         .split("|")
         .filter(Boolean)
         .map((customHeaderLinksArray) => {
-          const [linkText, linkTitle, linkHref, device, target, keepOnScroll] =
+          const [linkText, linkTitle, linkHref, device, target, keepOnScroll, submenu] =
             customHeaderLinksArray
               .split(",")
               .filter(Boolean)
