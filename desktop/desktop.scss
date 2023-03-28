@@ -11,3 +11,22 @@
     }
   }
 }
+
+/* Header & Navigation
+Hide Discourse Home and only show on scroll.
+*/
+.d-header .title {
+  display: none;
+}
+.docked .d-header .title {
+  display: block;
+}
+
+/* home-symbol icon at the top-right in the "latest" page is weird in size/position when the page is scrolled */
+#site-logo {
+  height: 2.2857em !important; /* dimensions taken from adjacent neighboring icons: search etc*/
+  width: 2.2857em  !important;
+}
+.d-header .title {
+  height: auto;
+}

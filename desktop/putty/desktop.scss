@@ -38,13 +38,6 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   color: #2061c4;
   font-family: Georgia, "Times New Roman", serif;
 }
-/* Header & Navigation */
-.d-header .title {
-  display: none;
-}
-.docked .d-header .title {
-  display: block;
-}
 /* Top Header Experiment */
 #top-menu-nav #top-menu li a {
 
@@ -399,14 +392,6 @@ table.group-members {
   }
 }
 
-/* home-symbol icon at the top-right in the "latest" page is weird in size/position when the page is scrolled */
-#site-logo {
-  height: 2.2857em !important; /* dimensions taken from adjacent enighboring icons: search etc*/
-  width: 2.2857em  !important;
-}
-.d-header .title {
-  height: auto;
-}
 
 /** DiscoTOC edits */
 .d-toc-post .topic-body {
