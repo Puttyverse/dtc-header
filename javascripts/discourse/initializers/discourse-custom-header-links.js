@@ -39,7 +39,7 @@ export default {
             const subItems = submenu
               .split("#")
               .map((subItem) => {
-                const [text, url] = subItem.split(",").map(x => x.trim());
+                const [text, url] = subItem.split(";").map(x => x.trim());
                 subLinks.push(h("li.sublink", h("a", {href: url}, text)));
               });
             linkItem = [linkText, h("ul.submenu", subLinks)];
