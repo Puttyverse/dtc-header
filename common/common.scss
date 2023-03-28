@@ -31,11 +31,11 @@
       color: var(--primary);
       line-height: 22px;
       &:hover {
-        color: var(--tertiary);
+        color: #f9ac85;
       }
       &.active > a,
       > a.active {
-        color: var(--tertiary);
+        color: #f9ac85;
       }
     }
   }

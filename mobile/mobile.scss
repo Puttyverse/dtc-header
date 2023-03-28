@@ -4,8 +4,8 @@
     a {
       color: var(--primary);
     }
-    &:visited {
-      color: var(--tertiary);
+    &:active {
+      color: #f9ac85;
     }
   }
 
@@ -34,23 +34,17 @@
 // applies when show_bar_on_mobile is checked
 .above-site-header-outlet .b-header {
   width: 100%;
-  background-color: var(--tertiary);
   height: 48px;
   margin-bottom: 0;
 
   .title {
-    float: left;
+    float: right;
     margin-right: 24px;
     a {
-      color: var(--secondary);
+      color: var(--primary);
     }
     &:visited {
-      color: var(--secondary);
-    }
-    .rtl & {
-      float: right;
-      margin-left: 24px;
-      margin-right: 0;
+      color: var(--primary);
     }
   }
   .title {
