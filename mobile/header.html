@@ -88,11 +88,11 @@
 
     api.reopenWidget("home-logo", {
       logo() {
-        return h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: settings.logo_url } });
+        return h('span', [
+          h('h2#brand-text-logo.text-logo', { key: 'logo' }, settings.brand_name),
+          h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: settings.logo_url } })
+        ]);
       }
-    });
-    api.decorateWidget("home-logo:before", helper => {
-      return [helper.h('h2#brand-text-logo.text-logo', { key: 'logo' }, settings.brand_name)];
     });
   }
 </script>
