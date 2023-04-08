@@ -103,7 +103,7 @@
   api.createWidget('brand-logo', {
     tagName: 'div.title',
 
-    logo(minimized) {
+    logo() {
       const mobileView = this.site.mobileView;
 
       const mobileLogoUrl = settings.mobile_logo_url || "";
@@ -122,7 +122,7 @@
         logo = h('');
       }
 
-      if (attrs.minimized) {
+      if (this.attrs.minimized) {
         return h('div#brand', [
           h('h2#brand-text-logo.text-logo', { key: 'logo' }, [title, logo])
         ]);
@@ -133,8 +133,8 @@
       ]);
     },
 
-    html(attrs, state) {
-      return h('a', { attributes: { href: settings.website_url } }, this.logo(attrs.minimized));
+    html() {
+      return h('a', { attributes: { href: settings.website_url } }, this.logo());
     },
 
     click(e) {
