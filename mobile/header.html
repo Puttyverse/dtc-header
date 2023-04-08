@@ -63,7 +63,6 @@
       },
 
       toggleBrandMenu() {
-        window.console.log("Brand menu", this.state.brandMenuVisible);
         this.state.brandMenuVisible = !this.state.brandMenuVisible;
 
         if (!this.state.brandMenuVisible) {
@@ -88,17 +87,23 @@
     });
 
     api.reopenWidget("home-logo", {
-      logo() {
+      logo(minimized) {
+        if (minimized) {
+          return h('h2#brand-logo', { key: 'logo' }, [
+            h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: settings.logo_url } })
+          ]);
+        }
         return h('h2#brand-text-logo.text-logo', { key: 'logo' }, [
           settings.brand_name,
           h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: settings.logo_url } })
         ]);
       },
       html(attrs, state) {
+        window.console.log("Brand menu", this.state.brandMenuVisible, attrs, state);
         if (attrs.topic) {
-          return h('a', { attributes: { href: settings.forum_url } }, this.logo());
+          return h('a', { attributes: { href: settings.forum_url } }, this.logo(attrs.minimized));
         }
-        return h('a', { attributes: { href: settings.website_url } }, this.logo());
+        return h('a', { attributes: { href: settings.website_url } }, this.logo(attrs.minimized));
       }
     });
   }
