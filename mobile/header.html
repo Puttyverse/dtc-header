@@ -99,7 +99,6 @@
         ]);
       },
       html(attrs, state) {
-        window.console.log("Brand menu", this.state.brandMenuVisible, attrs, state);
         if (attrs.topic) {
           return h('a', { attributes: { href: settings.forum_url } }, this.logo(attrs.minimized));
         }

@@ -80,7 +80,15 @@ export default {
 
       api.reopenWidget("home-logo", {
         html() {
-          return h('span', {}, '');
+          if (this.attrs.minimized) {
+            return h(
+              "a",
+              { attributes: { href: settings.forum_url, "data-auto-route": true } },
+              h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: settings.logo_url } })
+            );
+          } else {
+            return h('span', {}, '');
+          }
         }
       });
 
