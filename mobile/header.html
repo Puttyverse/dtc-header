@@ -63,7 +63,7 @@
       },
 
       toggleBrandMenu() {
-        console.log("Brand menu", this.state.brandMenuVisible);
+        window.console.log("Brand menu", this.state.brandMenuVisible);
         this.state.brandMenuVisible = !this.state.brandMenuVisible;
 
         if (!this.state.brandMenuVisible) {
@@ -88,7 +88,7 @@
     });
 
     api.reopenWidget("home-logo", (helper) => {
-      console.log(helper, helper?.attrs);
+      window.console.log(helper, helper?.attrs);
       logo() {
         return h('h2#brand-text-logo.text-logo', { key: 'logo' }, [
           settings.brand_name,
