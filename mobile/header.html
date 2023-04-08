@@ -87,7 +87,8 @@
       }
     });
 
-    api.reopenWidget("home-logo", {
+    api.reopenWidget("home-logo", (helper) => {
+      console.log(helper, helper?.attrs);
       logo() {
         return h('h2#brand-text-logo.text-logo', { key: 'logo' }, [
           settings.brand_name,
