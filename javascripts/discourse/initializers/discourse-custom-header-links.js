@@ -93,6 +93,9 @@ export default {
               return false;
             }
           },
+          html() {
+            return h("div");
+          }
         });
       }
     });
