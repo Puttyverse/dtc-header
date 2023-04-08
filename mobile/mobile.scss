@@ -57,8 +57,15 @@
   width: 0.9em;
   padding-bottom: 4px;
   padding-left: 2px;
+  .logo-big {
+    height: 1.3em;
+    width: 1.3em;
+  }
 }
 .d-header #brand-text-logo {
   text-transform: uppercase;
   color: var(--primary);
+  font-size: 2.25em;
+  font-family: "Bebas Neue";
+  padding-top: 8px;
 }
