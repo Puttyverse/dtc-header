@@ -20,10 +20,12 @@ byline:
   default: "Support + Inspiration for Multipotentialites"
 website_url:
   default: "https://theputtyverse.com/"
+forum_url:
+  default: "https://forum.theputtyverse.com/"
 logo_url:
   default: "https://staging.theputtyverse.com/wp-content/uploads/PuttyverseLogoNoText.png"
 mobile_logo_url:
-  default: ""
+  default: "https://staging.theputtyverse.com/wp-content/uploads/PuttyverseLogoNoText.png"
 links:
   type: list
   list_type: simple

@@ -3,8 +3,7 @@ export default {
     // show full bar on desktop and on mobile if specifically enabled
     component.set(
       "showWidget",
-      true
-      //!component.site.mobileView || settings.show_bar_on_mobile
+      !component.site.mobileView || settings.show_bar_on_mobile
     );
   },
 };
