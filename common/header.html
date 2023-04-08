@@ -132,7 +132,7 @@
     },
 
     html(attrs) {
-      window.console.log(attrs);
+      window.console.log(attrs, this, window);
       return h('a', { attributes: { href: settings.website_url } }, this.logo(attrs.minimized));
     },
 
