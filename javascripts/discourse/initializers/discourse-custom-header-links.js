@@ -78,6 +78,12 @@ export default {
         }
       });
 
+      api.reopenWidget("home-logo", {
+        html() {
+          return h('span', {}, '');
+        }
+      });
+
       if (settings.links_position === "left") {
         // if links are aligned left, we need to be able to open in a new tab
         api.reopenWidget("home-logo", {
@@ -92,9 +98,6 @@ export default {
 
               return false;
             }
-          },
-          html() {
-            return h("div");
           }
         });
       }
