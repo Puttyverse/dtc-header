@@ -30,6 +30,17 @@
 .d-header .title {
   display: none;
 }
+.d-header-wrap.hide-menus {
+  top: 0px;
+  z-index: 1000001;
+  height: 68px;
+  img.brand-logo.logo-big {
+    max-height: 36px;
+  }
+  .d-header.hide-menus {
+    height: 68px;
+  }
+}
 .docked .d-header .title {
   display: block;
 }

@@ -65,6 +65,7 @@ export default {
 
       api.decorateWidget("home-logo:after", (helper) => {
         const dHeader = document.querySelector(".d-header");
+        const dHeaderWrap = document.querySelector(".d-header-wrap");
 
         if (!dHeader) {
           return;
@@ -73,8 +74,10 @@ export default {
         const isTitleVisible = helper.attrs.minimized;
         if (isTitleVisible) {
           dHeader.classList.add("hide-menus");
+          dHeaderWrap.classList.add("hide-menus");
         } else {
           dHeader.classList.remove("hide-menus");
+          dHeaderWrap.classList.remove("hide-menus");
         }
       });
 
