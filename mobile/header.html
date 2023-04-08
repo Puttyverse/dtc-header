@@ -87,15 +87,15 @@
       }
     });
 
-    api.reopenWidget("home-logo", (helper) => {
+    api.reopenWidget("home-logo", {
       logo() {
-        window.console.log(helper, helper.attrs);
         return h('h2#brand-text-logo.text-logo', { key: 'logo' }, [
           settings.brand_name,
           h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: settings.logo_url } })
         ]);
       },
-      html() {
+      html(attrs, state) {
+        window.console.log(attrs);
         return h('a', { attributes: { href: settings.website_url } }, this.logo());
       }
     });
