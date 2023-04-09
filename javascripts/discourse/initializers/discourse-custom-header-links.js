@@ -29,7 +29,7 @@ export default {
 
         let linkItem = h("a", anchorAttributes, linkText);
 
-        if (submenu) {
+        if (submenu && submenu != "") {
           const subLinks = [];
           const subItems = submenu
             .split("#")
