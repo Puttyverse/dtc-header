@@ -20,22 +20,20 @@ export default {
       window.console.log(customHeaderLinks, linksSetting);
 
       const headerLinks = customHeaderLinks.map((customHeaderLink) => {
-        const [linkText, linkHref, submenu] = customHeaderLink.map((x) => x.trim());
-        const linkClass = `.${linkText
+        const linkClass = `.${customHeaderLink.linkText
           .toLowerCase()
           .replace(/\s/gi, "-")}-custom-header-links`;
 
-        const anchorAttributes = { href: linkHref };
+        const anchorAttributes = { href: customHeaderLink.url };
 
-        let linkItem = h("a", anchorAttributes, linkText);
+        let linkItem = h("a", anchorAttributes, customHeaderLink.linkText);
 
-        if (submenu && submenu != "") {
-          const subLinks = [];
-          const subItems = submenu
+        if (customHeaderLink.submenu && customHeaderLink.submenu != "") {
+          const subLinks = customHeaderLink.submenu
             .split("#")
             .map((subItem) => {
               const [text, url] = subItem.split(";").map(x => x.trim());
-              subLinks.push(h("li.sublink", h("a", {href: url}, text)));
+              return h("li.sublink", h("a", {href: url}, text));
             });
           linkItem = [h("ul.submenu", subLinks), linkItem];
         }
