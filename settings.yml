@@ -24,6 +24,10 @@ header_links:
         "url": {
           "type": "string"
         },
+        "mobile": {
+          "type": "bool",
+          "default": false
+        },
         "submenu": {
           "type": "string"
         }
