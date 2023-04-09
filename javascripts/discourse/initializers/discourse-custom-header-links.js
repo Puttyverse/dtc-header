@@ -8,56 +8,40 @@ export default {
 
   initialize() {
     withPluginApi("0.8.20", (api) => {
-      const customHeaderLinks = settings.Custom_header_links;
+      const linksSetting = settings.header_links;
 
       const linksPosition =
         settings.links_position === "right"
           ? "header-buttons:before"
           : "home-logo:after";
 
-      const headerLinks = [];
 
-      customHeaderLinks
-        .split("|")
-        .filter(Boolean)
-        .map((customHeaderLinksArray) => {
-          const [linkText, linkTitle, linkHref, device, target, keepOnScroll, submenu] =
-            customHeaderLinksArray
-              .split(",")
-              .filter(Boolean)
-              .map((x) => x.trim());
+      const customHeaderLinks = JSON.parse(linksSetting)
+      window.console.log(customHeaderLinks, linksSetting);
 
-          const deviceClass = `.${device}`;
-          const linkTarget = target === "self" ? "" : "_blank";
-          const keepOnScrollClass = keepOnScroll === "keep" ? ".keep" : "";
-          const linkClass = `.${linkText
-            .toLowerCase()
-            .replace(/\s/gi, "-")}-custom-header-links`;
+      const headerLinks = customHeaderLinks.map((customHeaderLink) => {
+        const [linkText, linkHref, submenu] = customHeaderLink.map((x) => x.trim());
+        const linkClass = `.${linkText
+          .toLowerCase()
+          .replace(/\s/gi, "-")}-custom-header-links`;
 
-          const anchorAttributes = {
-            title: linkTitle,
-            href: linkHref,
-          };
-          if (linkTarget) {
-            anchorAttributes.target = linkTarget;
-          }
-          let linkItem = h("a", anchorAttributes, linkText);
+        const anchorAttributes = { href: linkHref };
 
-          if (submenu) {
-            const subLinks = [];
-            const subItems = submenu
-              .split("#")
-              .map((subItem) => {
-                const [text, url] = subItem.split(";").map(x => x.trim());
-                subLinks.push(h("li.sublink", h("a", {href: url}, text)));
-              });
-            linkItem = [h("ul.submenu", subLinks), linkItem];
-          }
+        let linkItem = h("a", anchorAttributes, linkText);
 
-          headerLinks.push(
-            h(`li.headerLink${deviceClass}${keepOnScrollClass}${linkClass}`, linkItem)
-          );
-        });
+        if (submenu) {
+          const subLinks = [];
+          const subItems = submenu
+            .split("#")
+            .map((subItem) => {
+              const [text, url] = subItem.split(";").map(x => x.trim());
+              subLinks.push(h("li.sublink", h("a", {href: url}, text)));
+            });
+          linkItem = [h("ul.submenu", subLinks), linkItem];
+        }
+
+        return h(`li.headerLink.vdo${linkClass}`, linkItem);
+      });
 
       api.decorateWidget(linksPosition, (helper) => {
         return helper.h("ul.custom-header-links", headerLinks);
