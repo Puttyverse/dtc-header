@@ -64,6 +64,9 @@
             border-bottom: none;
           }
         }
+        &:hover {
+          background: var(--d-hover);
+        }
       }
     }
     &:hover ul.submenu {
