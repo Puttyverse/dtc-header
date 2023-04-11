@@ -16,8 +16,7 @@ export default {
           : "home-logo:after";
 
 
-      const customHeaderLinks = JSON.parse(linksSetting)
-      window.console.log(customHeaderLinks, linksSetting);
+      const customHeaderLinks = JSON.parse(linksSetting);
 
       const headerLinks = customHeaderLinks.map((customHeaderLink) => {
         const linkClass = `.${customHeaderLink.linkText
