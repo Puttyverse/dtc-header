@@ -137,16 +137,38 @@
 }
 
 footer#putty-main-footer {
+  background: #303030;
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: flex-end;
 
-  li {
-    margin: 0 20px;
+    li {
+      margin: 0 20px;
 
-    a:active, a:hover {
-      color: #00ebb0;
+      a {
+        font-weight: bold;
+        text-transform: uppercase
+        color: white;
+      }
+
+      a:active, a:hover {
+        color: #00ebb0;
+      }
     }
+  }
+  .footer-info {
+    text-align: right;
+    margin-right: 20px;
 
-    .footer-info a {
+    a {
       color: #e88356;
+      &:hover {
+        color: white;
+      }
     }
   }
 }
+
