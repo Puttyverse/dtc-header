@@ -138,6 +138,8 @@
 
 footer#putty-main-footer {
   background: #303030;
+  padding-top: 20px;
+
   ul {
     display: flex;
     flex-direction: row;
@@ -159,7 +161,7 @@ footer#putty-main-footer {
       }
     }
   }
-  .footer-info {
+  #footer-info {
     text-align: right;
     margin-right: 20px;
 
