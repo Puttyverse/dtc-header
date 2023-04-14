@@ -99,10 +99,10 @@
         //]);
       },
       html(attrs, state) {
-        if (attrs.topic) {
+        //if (attrs.topic) {
           return h('a', { attributes: { href: settings.forum_url } }, this.logo(attrs.minimized));
-        }
-        return h('a', { attributes: { href: settings.website_url } }, this.logo(attrs.minimized));
+        //}
+        //return h('a', { attributes: { href: settings.website_url } }, this.logo(attrs.minimized));
       }
     });
   }
