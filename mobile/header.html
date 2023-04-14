@@ -88,15 +88,15 @@
 
     api.reopenWidget("home-logo", {
       logo(minimized) {
-        if (minimized) {
+        //if (minimized) {
           return h('h2#brand-logo', { key: 'logo' }, [
             h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: settings.logo_url } })
           ]);
-        }
-        return h('h2#brand-text-logo.text-logo', { key: 'logo' }, [
-          settings.brand_name,
-          h('img#brand-logo.logo-big', { key: 'logo-small', attributes: { src: settings.logo_url } })
-        ]);
+        //}
+        //return h('h2#brand-text-logo.text-logo', { key: 'logo' }, [
+        //  settings.brand_name,
+        //  h('img#brand-logo.logo-big', { key: 'logo-small', attributes: { src: settings.logo_url } })
+        //]);
       },
       html(attrs, state) {
         if (attrs.topic) {
