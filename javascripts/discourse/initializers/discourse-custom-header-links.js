@@ -45,6 +45,7 @@ export default {
       });
 
       api.decorateWidget("home-logo:after", (helper) => {
+        const bHeader = document.querySelector(".brand-header");
         const dHeader = document.querySelector(".d-header");
         const dHeaderWrap = document.querySelector(".d-header-wrap");
 
@@ -55,9 +56,11 @@ export default {
         const isTitleVisible = helper.attrs.minimized;
         if (isTitleVisible) {
           dHeader.classList.add("hide-menus");
+          bHeader.classList.add("hide-menus");
           dHeaderWrap.classList.add("hide-menus");
         } else {
           dHeader.classList.remove("hide-menus");
+          bHeader.classList.remove("hide-menus");
           dHeaderWrap.classList.remove("hide-menus");
         }
       });
