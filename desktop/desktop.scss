@@ -2,9 +2,11 @@
   position: fixed;
   height: 104px;
   width: 100%;
+  z-index: 100;
 }
 body.light-theme .brand-header {
   background: url(https://theputtyverse.com/wp-content/themes/Divi%20Child%20Theme/img/banner-web2.jpg);
+  z-index: 10;
   .b-header {
     background: transparent;
   }
