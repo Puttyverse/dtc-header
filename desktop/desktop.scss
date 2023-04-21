@@ -3,7 +3,7 @@
   height: 104px;
   width: 100%;
   z-index: 100;
-  background: var(--header-background);
+  background: var(--header_background);
 }
 body.light-theme {
   background: #f2f1f1;
@@ -13,6 +13,10 @@ body.light-theme {
     .b-header {
       background: transparent;
     }
+  }
+  #main-outlet {
+    padding: 40px;
+
   }
 }
 
@@ -51,12 +55,12 @@ body.light-theme {
   z-index: 1000001;
   height: 68px;
   img#brand-logo.logo-big {
-    max-height: 44px;
+    max-height: 26px;
   }
   .d-header.hide-menus {
     height: 68px;
     body.light-theme & {
-      background: linear-gradient(135deg, #fff7a5, #d69a9a);
+      background: var(--header_primary);
     }
   }
 }
