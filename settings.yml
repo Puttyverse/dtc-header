@@ -43,9 +43,11 @@ website_url:
 forum_url:
   default: "https://forum.theputtyverse.com/"
 logo_url:
-  default: "https://staging.theputtyverse.com/wp-content/uploads/PuttyverseLogoNoText.png"
+  default: "https://theputtyverseprod.b-cdn.net/original/2X/8/8e93f3759d4c9afe00564cc9182ade6d699f46c5.png"
+dark_logo_url:
+  default: "https://theputtyverseprod.b-cdn.net/original/3X/b/e/bebcd68303bb82ba019699aaf0cee1d7869959fa.png"
 mobile_logo_url:
-  default: "https://staging.theputtyverse.com/wp-content/uploads/PuttyverseLogoNoText.png"
+  default: "https://theputtyverseprod.b-cdn.net/original/2X/2/2ea60de30341a27c8b57cb8a6507757b8d3d2fd2.png"
 links:
   type: list
   list_type: simple

@@ -106,33 +106,32 @@
     logo(minimized) {
       const mobileView = this.site.mobileView;
 
-      const mobileLogoUrl = settings.mobile_logo_url || "";
       const showMobileLogo = mobileView && (mobileLogoUrl.length > 0);
-
+      const mobileLogoUrl = settings.mobile_logo_url || "";
       const logoUrl = settings.logo_url || "";
+      const darkLogoUrl = settings.dark_logo_url || "";
       const title = settings.brand_name;
       const byline = settings.byline;
 
       let logo;
       if (showMobileLogo) {
         logo = h('img#brand-logo.logo-big', { key: 'logo-mobile', attributes: { src: mobileLogoUrl, alt: title } });
-      } else if (logoUrl.length) {
-        logo = h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: logoUrl, alt: title } });
+      } else if (document.body.classList.contains('dark-theme')) {
+        logo = h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: darkLogoUrl, alt: title } });
       } else {
-        logo = h('');
+        logo = h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: logoUrl, alt: title } });
       }
 
       if (minimized) {
         return h('span', {}, '');
       }
       return h('div#brand', [
-        h('h2#brand-text-logo.text-logo', { key: 'logo' }, [title, logo]),
+        h('h2#brand-logo', { key: 'logo' }, logo),
         h('span#byline-text', { key: 'byline' }, byline)
       ]);
     },
 
     html(attrs) {
-      window.console.log(attrs, this, window);
       return h('a', { attributes: { href: settings.website_url } }, this.logo(attrs.minimized));
     },
 

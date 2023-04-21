@@ -5,7 +5,7 @@
   z-index: 100;
 }
 body.light-theme .brand-header:not(.hide-menus) {
-  background: url(https://theputtyverse.com/wp-content/themes/Divi%20Child%20Theme/img/banner-web2.jpg);
+  background: linear-gradient(135deg,#fff7a5,#a699ac);
   .b-header {
     background: transparent;
   }
@@ -42,7 +42,7 @@ body.light-theme .d-header-wrap:not(.hide-menus) .d-header {
   display: none;
 }
 .d-header-wrap.hide-menus {
-  top: 0px;
+  top: 0;
   z-index: 1000001;
   height: 68px;
   img#brand-logo.logo-big {
@@ -51,7 +51,7 @@ body.light-theme .d-header-wrap:not(.hide-menus) .d-header {
   .d-header.hide-menus {
     height: 68px;
     body.light-theme & {
-      background: url(https://theputtyverse.com/wp-content/themes/Divi%20Child%20Theme/img/banner-web2.jpg);
+      background: linear-gradient(135deg,#fff7a5,#a699ac);
     }
   }
 }
