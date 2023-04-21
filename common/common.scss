@@ -7,7 +7,7 @@
 
   #brand-logo {
     max-height: 26px;
-    margin: 6px 0;
+    margin: 6px 0 12px;
   }
 
   #byline-text {
@@ -51,6 +51,9 @@
     > li {
       float: left;
       list-style: none;
+      svg {
+        color: var(--primary);
+      }
     }
     a {
       width: 28px;
