@@ -89,14 +89,14 @@
     api.reopenWidget("home-logo", {
       logo() {
         return h('h2#brand-logo', { key: 'logo' }, [
-          h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: settings.mobile_logo } })
+          h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: settings.mobile_logo_url } })
         ]);
       },
       html(attrs, state) {
-        if (document.location.pathname !== "/") {
-          return h('a', { attributes: { href: settings.forum_url } }, this.logo());
-        }
-        return h('a', { attributes: { href: settings.website_url } }, this.logo());
+        return h('a',
+         { attributes: { href: (document.location.pathname !== "/") ? settings.forum_url : settings.website_url} },
+         this.logo()
+        );
       }
     });
   }
