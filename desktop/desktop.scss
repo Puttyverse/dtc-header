@@ -3,7 +3,9 @@
   height: 104px;
   width: 100%;
   z-index: 100;
-  background: var(--header_background);
+  body.dark-theme & {
+    background: var(--header_background);
+  }
 }
 body.light-theme {
   background: #f2f1f1;
@@ -60,7 +62,7 @@ body.light-theme {
   .d-header.hide-menus {
     height: 68px;
     body.light-theme & {
-      background: var(--header_primary);
+      background: initial;
     }
   }
 }
