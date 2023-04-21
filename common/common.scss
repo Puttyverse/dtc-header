@@ -51,9 +51,6 @@
     > li {
       float: left;
       list-style: none;
-      svg {
-        color: var(--primary);
-      }
     }
     a {
       width: 28px;
@@ -88,6 +85,9 @@
     .headerLink:not(.keep) {
       display: none;
     }
+  }
+  body.light-theme & svg {
+    color: var(--primary);
   }
 }
 
