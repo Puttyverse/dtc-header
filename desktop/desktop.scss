@@ -9,6 +9,10 @@
 }
 body.light-theme {
   background: #f2f1f1;
+  .brand-header {
+    background: linear-gradient(135deg, #fff7a5, #d69a9a);
+  }
+
   #main-outlet {
     padding: 40px;
     background: white;
