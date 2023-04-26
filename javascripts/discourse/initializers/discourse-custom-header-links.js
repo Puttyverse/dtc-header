@@ -71,7 +71,7 @@ export default {
             return h(
               "a",
               { attributes: { href: settings.forum_url, "data-auto-route": true } },
-              h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: settings.logo_url } })
+              h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: settings.mobile_logo_url } })
             );
           } else {
             return h('span', {}, '');
