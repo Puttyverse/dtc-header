@@ -9,17 +9,14 @@
 }
 body.light-theme {
   background: #f2f1f1;
-  .brand-header:not(.hide-menus) {
-    background: linear-gradient(135deg, #fff7a5, #d69a9a);
-
-    .b-header {
-      background: transparent;
-    }
-  }
   #main-outlet {
     padding: 40px;
     background: white;
   }
+}
+
+.brand-header.hide-menus {
+  display: none;
 }
 
 .b-header {
