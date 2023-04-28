@@ -17,6 +17,10 @@ body.light-theme {
     padding: 40px;
     background: white;
   }
+
+  .alert.alert-info {
+    background-color: #fdd417
+  }
 }
 
 .brand-header.hide-menus {
@@ -111,3 +115,11 @@ body.light-theme {
 .d-header .title {
   height: auto;
 }
+
+
+// Putty rules
+
+#main a:hover {
+  text-decoration: underline;
+}
+
