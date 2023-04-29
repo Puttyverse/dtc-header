@@ -123,4 +123,6 @@ body.light-theme {
 #main a:hover {
   text-decoration: underline;
 }
-
+.d-header a:hover, .b-header a:hover {
+  text-decoration: none!important;
+}
