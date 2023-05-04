@@ -26,7 +26,7 @@
       line-height: 22px;
       font-family: "Montserrat"!important;
       &:hover {
-        color: #f9ac85;
+        color: #F45363;
         background: none;
       }
       &.active > a,
@@ -199,7 +199,7 @@ footer#putty-main-footer {
 }
 
 /* Hide Invites tab on all Preferences pages (e.g., https://forum.theputtyverse.com/my/invited/pending) */
-li.invited {
+li.user-nav__invites {
   display: none !important;
 }
 
@@ -222,7 +222,7 @@ li.invited {
 }
 
 /* Remove "Posted" and "Seen" columns from group-detail member lists */
-table.group-members {
+div.group-members {
   th.bulk-select {
     + th + th + th,
     + th + th + th + th {

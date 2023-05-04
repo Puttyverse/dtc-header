@@ -1,6 +1,6 @@
 .brand-header {
   position: fixed;
-  height: 104px;
+  height: 114px;
   width: 100%;
   z-index: 100;
   body.dark-theme & {
@@ -11,6 +11,9 @@ body.light-theme {
   background: #f2f1f1;
   .brand-header {
     background: linear-gradient(135deg, #fff7a5, #d69a9a);
+    .b-header {
+      background: transparent;
+    }
   }
 
   #main-outlet {
@@ -19,7 +22,7 @@ body.light-theme {
   }
 
   .alert.alert-info {
-    background-color: #fdd417
+    background-color: #F9B492;
   }
 }
 
@@ -46,12 +49,12 @@ body.light-theme {
   background: transparent;
 }
 .d-header-wrap {
-  top: 44px;
+  top: 54px;
   position: fixed;
   width: 100%;
 }
 #main-outlet {
-  margin-top: 128px;
+  margin-top: 140px;
 }
 // Hide Discourse Home and only show on scroll.
 .d-header .title {
