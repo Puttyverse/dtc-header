@@ -242,17 +242,10 @@ li.user-nav__invites {
 }
 
 /* Remove "Posted" and "Seen" columns from group-detail member lists */
-div.group-members {
-  th.bulk-select {
-    + th + th + th,
-    + th + th + th + th {
-      display: none;
-    }
-  }
-  td.group-owner {
-    + td + td,
-    + td + td + td {
-      display: none;
-    }
+.group-members {
+  grid-template-columns: 3fr minmax(min-content, 1fr);
+  [class*="--last-posted"],
+  [class*="--last-seen"] {
+    display: none;
   }
 }
