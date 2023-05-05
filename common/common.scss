@@ -173,6 +173,26 @@ footer#putty-main-footer {
   }
 }
 
+// custom hamburger / sidebar order
+
+.sidebar-sections {
+  display: flex;
+  flex-direction: column;
+  div[data-section-name='community'] {
+    order: 1;
+  }
+  div[data-section-name='messages'] {
+    order: 2;
+  }
+  div[data-section-name='categories'] {
+    order: 3;
+  }
+  div[data-section-name='tags'] {
+    order: 4;
+  }
+}
+
+
 // putty rules
 
 /* Joel Zaslofsky, 2019-02-20
