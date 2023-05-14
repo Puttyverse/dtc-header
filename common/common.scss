@@ -178,17 +178,15 @@ footer#putty-main-footer {
 .sidebar-sections {
   display: flex;
   flex-direction: column;
-  div[data-section-name='community'] {
+  div[data-section-name='messages'] {
     order: 1;
   }
-  div[data-section-name='messages'] {
+  div[data-section-name='categories'] {
     order: 2;
   }
-  div[data-section-name='categories'] {
-    order: 3;
-  }
-  div[data-section-name='tags'] {
-    order: 4;
+  div[data-section-name='tags'], div[data-section-name='community'],
+  body:not(.staff) a[data-link-name='Admin'], body:not(.staff) a[data-link-name='Review'] {
+    display: none;
   }
 }
 
