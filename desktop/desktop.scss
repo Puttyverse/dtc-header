@@ -8,12 +8,17 @@
   }
 }
 body.light-theme {
-  background: #f2f1f1;
+  background: #FCFAEE;
   .brand-header {
     background: linear-gradient(135deg, #fff7a5, #d69a9a);
     .b-header {
       background: transparent;
     }
+  }
+
+  .d-header .custom-header-links .headerLink:hover ul.submenu {
+    background: #fbfbfb;
+    border: 1px solid #fbfbfb;
   }
 
   #main-outlet {

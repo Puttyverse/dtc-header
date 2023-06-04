@@ -110,6 +110,19 @@
     }
   }
 }
+body.light-theme {
+  .custom-header-links .headerLink:hover a {
+    border-bottom: 2px solid #f45363;
+  }
+
+  .extra-info-wrapper .topic-link {
+    color: var(--primary);
+  }
+
+  .badge-wrapper .badge-category .category-name, .extra-info-wrapper .discourse-tag {
+    color: #6b6b6b;
+  }
+}
 
 .desktop-view .vmo,
 .mobile-view .vdo {
