@@ -197,7 +197,7 @@ footer#putty-main-footer {
   div[data-section-name='categories'] {
     order: 2;
   }
-  div[data-section-name='tags'], div[data-section-name='community'], body:not(.staff) div[data-section-name='Staff'] {
+  div[data-section-name='tags'], div[data-section-name='community'], body:not(.staff) div[data-section-name='staff'] {
     display: none;
   }
   a.sidebar-section-link {
