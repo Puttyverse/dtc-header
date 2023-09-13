@@ -146,6 +146,10 @@ body.light-theme {
   z-index: 20000;
 }
 
+.discourse-post-event li.event-invitee:not(.status-interested,.status-going,.status-not_going) {
+  display: none;
+}
+
 footer#putty-main-footer {
   background: #303030;
   padding: 20px 15px;
