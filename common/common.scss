@@ -83,6 +83,8 @@
 }
 
 .d-header {
+  //hide box shadow (introduced in discourse core) 
+  box-shadow: none;
   &.hide-menus {
     .headerLink:not(.keep) {
       display: none;
